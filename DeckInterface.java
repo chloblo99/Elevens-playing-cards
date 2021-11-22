@@ -4,7 +4,7 @@ public interface DeckInterface<T> {
 
     public boolean isEmpty();
 
-    public boolean addNewEntry(T newEntry);
+    public boolean addNewEntry(Card newEntry);
 
     public boolean remove(T anEntry);
 

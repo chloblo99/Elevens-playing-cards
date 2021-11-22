@@ -28,8 +28,8 @@ public class DeckArray <T> implements DeckInterface<T> {
         return (numberOfEntries == 0);
     }
 
-    public boolean addNewEntry(T newEntry){
-        MyNode<T> newNode = new MyNode<>(newEntry);
+    public boolean addNewEntry(Card newEntry){
+        MyNode<T> newNode = new MyNode<>((T) newEntry);
         newNode.setNext(firstNode);
         firstNode = newNode;
         numberOfEntries++;
@@ -104,7 +104,7 @@ public class DeckArray <T> implements DeckInterface<T> {
     public void display(){
         System.out.println("***** Displaying 9 cards *****" + '\n');
         displayChain(firstNode);
-        System.out.println("******************************" + '\n');
+        System.out.println('\n' + "******************************" + '\n');
     }
 
     private void displayChain(MyNode<T> nodeOne){
